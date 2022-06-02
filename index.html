@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strange.Website</title>
+    <style>
+        /* @font-face {
+                font-family: "Redaction";
+                src: url('/fonts/Redaction-Regular.woff2') format('woff2');
+                font-style: normal;
+                font-weight: normal;
+            }
+
+            @font-face {
+                font-family: "Redaction 35";
+                src: url('/fonts/Redaction_35-Regular.woff2') format('woff2');
+                font-style: normal;
+                font-weight: normal;
+            } */
+
+        @font-face {
+            font-family: "Redaction 50";
+            src: url('/fonts/Redaction_50-Regular.woff2') format('woff2');
+            font-style: normal;
+            font-weight: normal;
+        }
+
+
+        /* @font-face {
+            font-family: "Redaction 70";
+            src: url('/fonts/Redaction_70-Regular.woff2') format('woff2');
+            font-style: normal;
+            font-weight: normal;
+        }
+
+            @font-face {
+                font-family: "Redaction 70";
+                src: url('/fonts/Redaction_70-Italic.woff2') format('woff2');
+                font-style: italic;
+                font-weight: normal;
+            }
+
+            @font-face {
+                font-family: "Redaction 20";
+                src: url('/fonts/Redaction_20-Regular.woff2') format('woff2');
+                font-style: normal;
+                font-weight: normal;
+            }
+
+          */
+
+        body {
+            /* background-color: #008080; */
+            font-family: "Redaction 50";
+            line-height: 1.3;
+        }
+
+        ::selection {
+            color: #fff;
+            background-color: #000;
+        }
+
+        main {
+            font-size: 3rem;
+            margin: 0 auto;
+            padding: 1em;
+        }
+
+        ul {
+            padding: 0;
+        }
+
+        li {
+            list-style-type: none;
+            margin-bottom: 2em;
+            /* text-indent: 5ch; */
+        }
+
+        li:hover {}
+
+        li span {
+            /* font-family: "Redaction 20"; */
+            color: #0000ff;
+        }
+
+        time {
+            /* font-family: "Redaction 20"; */
+            /* font-style: italic; */
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <ul>
+            {% set sortedwebsites = websites | reverse %}
+            {% for website in sortedwebsites %}
+            <li><time>{{ website.date }}</time> — {{ website.body | website | nl2br | safe }}</li>
+            {% endfor %}
+        </ul>
+    </main>
+</body>
+
+</html>
