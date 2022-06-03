@@ -1,4 +1,5 @@
 module.exports = function (eleventyConfig) {
+  eleventyConfig.addPassthroughCopy('meta');
   eleventyConfig.addPassthroughCopy('fonts');
   eleventyConfig.addPassthroughCopy('img');
   eleventyConfig.addPassthroughCopy('*.css');
