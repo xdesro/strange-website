@@ -1,7 +1,26 @@
 @font-face {
+  font-family: 'Redaction 35';
+  src: url('/fonts/Redaction_35-Regular.woff2') format('woff2');
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'Redaction 35';
+  src: url('/fonts/Redaction_35-Italic.woff2') format('woff2');
+  font-style: italic;
+  font-weight: normal;
+}
+
+@font-face {
   font-family: 'Redaction 50';
   src: url('/fonts/Redaction_50-Regular.woff2') format('woff2');
   font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'Redaction 50';
+  src: url('/fonts/Redaction_50-Italic.woff2') format('woff2');
+  font-style: italic;
   font-weight: normal;
 }
 
@@ -13,7 +32,7 @@
 
 body {
   background-color: whitesmoke;
-  font-family: 'Redaction 50';
+  font-family: 'Redaction 35';
   line-height: 1.3;
   margin: 0;
   padding: 0;
@@ -35,7 +54,7 @@ main:before {
   position: absolute;
   height: 100%;
   top: 0;
-  z-index: 2;
+  z-index: 1;
   left: 0;
   right: 0;
   content: '';
@@ -52,6 +71,24 @@ main:before {
     url('/img/bottom.png') bottom left repeat-x;
 }
 
+article {
+  margin-bottom: 2em;
+}
+
+h2 {
+  font-size: 1em;
+  margin-bottom: 0.5em;
+  font-style: italic;
+}
+p {
+  margin-top: 0;
+  padding-left: 2ch;
+}
+
+span {
+  color: #0000ff;
+}
+
 .app-inner {
   height: 100%;
   position: absolute;
@@ -64,27 +101,27 @@ main:before {
   overflow-y: scroll;
 }
 
-ul {
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: auto;
+  margin: 0;
+  overflow: hidden;
   padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
 }
 
-li {
-  list-style-type: none;
-  margin-bottom: 2em;
-  /* text-indent: 5ch; */
-}
-
-li:hover {
-}
-
-li span {
-  /* font-family: "Redaction 20"; */
-  color: #0000ff;
-}
-
-time {
-  /* font-family: "Redaction 20"; */
-  /* font-style: italic; */
+.tw-link {
+  position: absolute;
+  width: 3rem;
+  height: 2.4rem;
+  display: block;
+  z-index: 2;
+  top: 3rem;
+  cursor: pointer;
+  left: 6.8rem;
 }
 
 @media (min-width: 620px) {

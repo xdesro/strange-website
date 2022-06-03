@@ -11,16 +11,19 @@
 
 <body>
     <main>
+        <h1 class="visually-hidden">A strange website...</h1>
         <div class="app-inner">
-            <ul>
-                {% set sortedwebsites = websites | reverse %}
-                {% for website in sortedwebsites %}
-                <li>
-                    <time>{{ website.date }}</time> — {{ website.body | website | nl2br | safe }}
-                </li>
-                {% endfor %}
-            </ul>
+            {% set sortedwebsites = websites | reverse %}
+            {% for website in sortedwebsites %}
+            <article>
+                <h2>
+                    <time>{{ website.date }}</time>
+                </h2>
+                <p>{{ website.body | website | nl2br | safe }}</p>
+            </article>
+            {% endfor %}
         </div>
+        <a class="tw-link" href="https://twitter.com/xdesro"><span class="visually-hidden">Go to my Twitter</span></a>
     </main>
 </body>
 
