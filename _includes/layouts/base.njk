@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Strange.Website</title>
+    <meta name="description"
+        content="Well now, seems you've found a strange and perhaps surprising website, indeed. As with all things, take and enjoy your time — after all, no one may but you." />
+    <link rel="stylesheet" href="/css/style.css" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/jpg" />
+    <meta name="og:image" content="https://strange.website/meta/og.jpg" }}" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@xdesro" />
+    <meta name="twitter:title" content="Quite A Strange.Website Indeed" />
+    <meta name="twitter:image" content="https://strange.website/meta/og.jpg" }}" />
+
+    <link rel="apple-touch-icon" sizes="120x120" href="/meta/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/meta/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/meta/favicon-16x16.png">
+    <link rel="manifest" href="/meta/site.webmanifest">
+    <link rel="mask-icon" href="/meta/safari-pinned-tab.svg" color="#c0c0c0">
+    <meta name="msapplication-TileColor" content="#c0c0c0">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+    <main>
+        {% include "header.njk" %}
+        <div class="app-inner">
+            {{ content | safe }}
+        </div>
+        {% include 'footer.njk' %}
+    </main>
+    <script>
+        const getValidUrl = (url = "") => {
+            let newUrl = window.decodeURIComponent(url).trim().replace(/\s/g, "");
+
+            if (/^(:\/\/)/.test(newUrl)) {
+                return `http${newUrl}`;
+            }
+            if (!/^(f|ht)tps?:\/\//i.test(newUrl)) {
+                return `//${newUrl}`;
+            }
+
+            return newUrl;
+        };
+
+        const locationForm = document.querySelector('#location');
+        locationForm.addEventListener('submit', e => {
+            e.preventDefault();
+            const { value } = e.target[0];
+            console.log(getValidUrl(value))
+            location.href = getValidUrl(value)
+        })
+    </script>
+</body>
+
+</html>

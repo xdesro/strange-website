@@ -1,0 +1,43 @@
+@use 'fonts';
+
+@use 'partials/base';
+@use 'partials/util';
+
+@use 'partials/header';
+@use 'partials/footer';
+@use 'partials/website';
+
+.app-inner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 100%;
+  padding: 14rem 2rem 8rem;
+  border-right: 1px solid white;
+  border-bottom: 1px solid #929292;
+  border-left: 1px solid #929292;
+
+  ::selection {
+    color: var(--app-background);
+    background-color: #000;
+  }
+}
+
+@media (min-width: 620px) {
+  body {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+  main {
+    max-width: 70rem;
+    max-height: calc(100vh - 6rem);
+    margin: 3rem auto;
+  }
+  .app-inner {
+    font-size: 3rem;
+  }
+}

@@ -1,0 +1,271 @@
+.header {
+  font-family: 'MS Sans';
+  font-size: 0.7rem;
+  position: relative;
+  z-index: 3;
+  border: 4px solid #cbcbcb;
+  background-color: #cbcbcb;
+  &:before {
+    display: block;
+    width: 100%;
+    height: 1rem;
+    margin-bottom: 0.25rem;
+    content: '';
+    background-color: var(--ui-accent);
+  }
+  &:after {
+    position: absolute;
+    right: -4px;
+    bottom: -4px;
+    left: -4px;
+    content: '';
+    border-bottom: 1px solid #929292;
+  }
+}
+
+.window {
+  $c: currentColor;
+
+  position: absolute;
+  top: 2px;
+  right: 2px;
+
+  .button {
+    width: 14px;
+    height: 12px;
+    background-color: #cbcbcb;
+    &:after {
+      font-size: 1px;
+      display: block;
+      width: 1px;
+      height: 1px;
+      content: '';
+      color: black;
+    }
+  }
+  &__min {
+    &:after {
+      box-shadow: 2em 6em $c, 3em 6em $c, 4em 6em $c, 5em 6em $c, 6em 6em $c,
+        8em 6em $c, 2em 7em $c, 3em 7em $c, 4em 7em $c, 5em 7em $c, 6em 7em $c,
+        7em 7em $c;
+    }
+  }
+  &__resize {
+    &:after {
+      box-shadow: 4em 0em $c, 5em 0 $c, 6em 0 $c, 7em 0 $c, 8em 0 $c, 9em 0 $c,
+        4em 1em $c, 5em 1em $c, 6em 1em $c, 7em 1em $c, 8em 1em $c, 9em 1em $c,
+        4em 2em $c, 9em 2em $c, 2em 3em $c, 3em 3em $c, 4em 3em $c, 5em 3em $c,
+        6em 3em $c, 7em 3em $c, 9em 3em $c, 2em 4em $c, 3em 4em $c, 4em 4em $c,
+        5em 4em $c, 6em 4em $c, 7em 4em $c, 9em 4em $c, 2em 5em $c, 7em 5em $c,
+        8em 5em $c, 9em 5em $c, 2em 6em $c, 7em 6em $c, 2em 7em $c, 7em 7em $c,
+        2em 8em $c, 3em 8em $c, 4em 8em $c, 5em 8em $c, 6em 8em $c, 7em 8em $c;
+    }
+  }
+  &__close {
+    &:after {
+      box-shadow: 2em 1em $c, 3em 1em $c, 8em 1em $c, 9em 1em $c, 3em 2em $c,
+        4em 2em $c, 7em 2em $c, 8em 2em $c, 4em 3em $c, 5em 3em $c, 6em 3em $c,
+        7em 3em $c, 5em 4em $c, 6em 4em $c, 4em 5em $c, 5em 5em $c, 6em 5em $c,
+        7em 5em $c, 3em 6em $c, 4em 6em $c, 7em 6em $c, 8em 6em $c, 2em 7em $c,
+        3em 7em $c, 8em 7em $c, 9em 7em $c;
+    }
+  }
+}
+
+.top-nav {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: start;
+  margin: 0;
+  padding-bottom: 0.25rem;
+  padding-left: 0.5rem;
+  list-style-type: none;
+  border-bottom: 1px solid #929292;
+
+  a {
+    display: inline-block;
+    padding-block: 0.25rem;
+    padding-inline: 0.25rem;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    &.inactive {
+      color: #929292;
+      text-shadow: 1px 1px #fff;
+    }
+
+    &:first-letter {
+      text-decoration: underline;
+
+      text-underline-offset: 0.1em;
+      text-decoration-thickness: 0.1em;
+    }
+  }
+}
+
+.secondary-nav {
+  $b: #011893;
+  $g: #929292;
+  $w: #ffffff;
+
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: start;
+  margin: 0;
+  padding: 0;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.5rem;
+  list-style-type: none;
+  border-top: 1px solid white;
+  border-bottom: 1px solid #929292;
+
+  a {
+    display: grid;
+    grid-row-gap: 0.5em;
+    place-content: center;
+    place-items: center;
+    width: 4rem;
+    height: 4rem;
+    text-decoration: none;
+  }
+
+  span {
+    font-size: 1px;
+    display: block;
+    &:before {
+      display: block;
+      width: 1em;
+      height: 1em;
+      content: '';
+    }
+  }
+  &__back {
+    span {
+      width: 18px;
+      height: 14px;
+      &:before {
+        // prettier-ignore
+        box-shadow: 6em 0 $g,
+        5em 1em $g, 6em 1em $g, 7em 1em $w,
+        4em 2em $g, 6em 2em $g, 7em 2em $w,
+        3em 3em $g, 5em 3em $w, 6em 3em $g, 7em 3em $g, 8em 3em $g, 9em 3em $g, 10em 3em $g, 11em 3em $g, 14em 3em $g, 15em 3em $g, 16em 3em $g,
+        2em 4em $g, 4em 4em $w, 7em 4em $w, 8em 4em $w, 9em 4em $w, 10em 4em $w, 11em 4em $g, 12em 4em $w, 13em 4em $g, 15em 4em $w, 16em 4em $g, 17em 4em $g, 18em 4em $g,
+        1em 5em $g, 3em 5em $w, 11em 5em $g, 12em 5em $w, 13em 5em $g, 14em 5em $w, 17em 5em $g, 18em 5em $g, 19em 5em $w,
+        2em 6em $g, 11em 6em $g, 12em 6em $g, 13em 6em $g, 14em 6em $g, 16em 6em $g, 17em 6em $g, 18em 6em $g, 19em 6em $w,
+        2em 7em $g, 3em 7em $g, 6em 7em $g, 7em 7em $g, 8em 7em $g, 9em 7em $g, 10em 7em $g, 11em 7em $g, 12em 7em $g, 13em 7em $w, 14em 7em $g, 15em 7em $g, 16em 7em $g, 17em 7em $g, 18em 7em $w, 19em 7em $w,
+        3em 8em $g, 4em 8em $g, 6em 8em $g, 7em 8em $g, 8em 8em $g, 9em 8em $g, 10em 8em $g, 11em 8em $g, 12em 8em $g, 13em 8em $w, 14em 8em $g, 15em 8em $g, 16em 8em $g, 17em 8em $w, 18em 8em $w, 19em 8em $w,
+        4em 9em $g, 5em 9em $g, 6em 9em $g, 7em 9em $g, 8em 9em $w, 9em 9em $w, 10em 9em $w, 11em 9em $w, 12em 9em $w, 13em 9em $w, 15em 9em $w, 16em 9em $w, 17em 9em $w, 18em 9em $w,
+        5em 10em $g, 6em 10em $g, 7em 10em $g, 8em 10em $w,
+        6em 11em $g, 7em 11em $g, 8em 11em $w,
+        7em 12em $g, 8em 12em $w,
+        8em 13em $w
+      }
+    }
+  }
+  &__forwards {
+    span {
+      width: 18px;
+      height: 13px;
+      &:before {
+        // prettier-ignore
+        box-shadow: 12em 0 $g,
+        12em 1em $g, 13em 1em $g,
+        12em 2em $g, 13em 2em $w, 14em 2em $g,
+        2em 3em $g, 3em 3em $g, 4em 3em $g, 7em 3em $g, 8em 3em $g, 9em 3em $g, 10em 3em $g, 11em 3em $g, 12em 3em $g, 13em 3em $w, 15em 3em $g,
+        1em 4em $g, 3em 4em $w, 4em 4em $g, 5em 4em $g, 7em 4em $g, 8em 4em $w, 9em 4em $w, 10em 4em $w, 11em 4em $w, 12em 4em $w, 13em 4em $w, 16em 4em $g,
+        1em 5em $g, 2em 5em $w, 5em 5em $g, 6em 5em $g, 7em 5em $g, 8em 5em $w, 17em 5em $g,
+        1em 6em $g, 4em 6em $g, 5em 6em $g, 6em 6em $g, 7em 6em $g, 8em 6em $w, 16em 6em $g, 17em 6em $g, 18em 6em $w,
+        2em 7em $g, 3em 7em $g, 4em 7em $g, 5em 7em $g, 6em 7em $w, 7em 7em $g, 8em 7em $g, 9em 7em $g, 10em 7em $g, 11em 7em $g, 12em 7em $g, 15em 7em $g, 16em 7em $g, 17em 7em $g, 18em 7em $w,
+        3em 8em $g, 4em 8em $g, 5em 8em $w, 6em 8em $w, 8em 8em $g, 9em 8em $g, 10em 8em $g, 11em 8em $g, 12em 8em $g, 13em 8em $w, 14em 8em $g, 15em 8em $g, 16em 8em $g, 17em 8em $w, 18em 8em $w,
+        4em 9em $w, 5em 9em $w, 9em 9em $w, 10em 9em $w, 11em 9em $w, 12em 9em $g, 13em 9em $g, 14em 9em $g, 15em 9em $g, 16em 9em $w, 17em 9em $w, 
+        12em 10em $g, 13em 10em $g, 14em 10em $g, 15em 10em $w, 16em 10em $w,
+        13em 11em $g, 14em 11em $w, 15em 11em $w,
+        14em 12em $w;
+      }
+    }
+  }
+  &__home {
+    span {
+      width: 18px;
+      height: 18px;
+      &:before {
+        // prettier-ignore
+        box-shadow: 4em 0 $b, 5em 0 $b, 6em 0 $b, 9em 0 $b,
+        4em 1em $b, 5em 1em $w, 6em 1em $b, 8em 1em $b, 9em 1em $w, 10em 1em $b,
+        4em 2em $b, 5em 2em $w, 6em 2em $b, 7em 2em $b, 8em 2em $w, 11em 2em $b,
+        4em 3em $b, 5em 3em $w, 6em 3em $b, 7em 3em $w, 9em 3em $b, 12em 3em $b,
+        4em 4em $b, 5em 4em $w, 8em 4em $b, 10em 4em $b, 13em 4em $b,
+        4em 5em $b, 5em 5em $w, 7em 5em $b, 11em 5em $b, 14em 5em $b,
+        3em 6em $b, 4em 6em $w, 6em 6em $b, 12em 6em $b, 15em 6em $b,
+        2em 7em $b, 3em 7em $w, 5em 7em $b, 13em 7em $b, 16em 7em $b,
+        1em 8em $b, 2em 8em $b, 3em 8em $b, 4em 8em $b, 14em 8em $b, 15em 8em $b, 16em 8em $g, 17em 8em $b,
+        3em 9em $b, 4em 9em $w, 8em 9em $b, 9em 9em $b, 10em 9em $b, 11em 9em $w, 15em 9em $b, 16em 9em $g, 17em 9em $g,
+        3em 10em $b, 4em 10em $w, 8em 10em $b, 9em 10em $g, 11em 10em $w, 15em 10em $b, 16em 10em $g, 18em 10em $g,
+        3em 11em $b, 4em 11em $w, 8em 11em $b, 9em 11em $g, 11em 11em $w, 15em 11em $b, 16em 11em $g,
+        3em 12em $b, 4em 12em $w, 8em 12em $b, 9em 12em $g, 11em 12em $w, 15em 12em $b, 16em 12em $g,
+        3em 13em $b, 4em 13em $w, 8em 13em $b, 9em 13em $g, 11em 13em $w, 15em 13em $b, 16em 13em $g,
+        3em 14em $b, 4em 14em $b, 5em 14em $b, 6em 14em $b, 7em 14em $b, 8em 14em $b, 9em 14em $g, 11em 14em $b, 12em 14em $b, 13em 14em $b, 14em 14em $b, 15em 14em $b, 16em 14em $g,
+        5em 15em $g, 6em 15em $g, 7em 15em $g, 8em 15em $g, 9em 15em $g, 14em 15em $g, 15em 15em $g, 16em 15em $g,
+      }
+    }
+  }
+}
+
+.tertiary-nav {
+  padding-top: 0.5rem;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  border-top: 1px solid white;
+  .button {
+    margin: 0 0 0.25rem;
+    padding: 0.2rem 0.5rem 0.1rem;
+  }
+}
+
+.location {
+  display: grid;
+  grid-gap: 0.25rem;
+  grid-template-columns: auto 1fr auto;
+  align-items: baseline;
+  margin-bottom: 0.25rem;
+  label {
+    &:after {
+      content: ':';
+    }
+  }
+  &__field-wrapper {
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 0.2rem 0.5rem 0.1rem;
+    border: 1px solid #929292;
+    border-right-color: white;
+    border-bottom-color: white;
+    background: white;
+    &:before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      content: '';
+      pointer-events: none;
+      border: 1px solid black;
+      border-right-color: #cbcbcb;
+      border-bottom-color: #cbcbcb;
+    }
+  }
+  input {
+    font: inherit;
+    width: 100%;
+    border: none;
+    outline: none;
+  }
+  button {
+    font: inherit;
+    align-self: stretch;
+    width: 3rem;
+    background: inherit;
+  }
+}

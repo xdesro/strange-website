@@ -1,0 +1,15 @@
+.website {
+  font-size: 2rem;
+  margin-bottom: 2em;
+
+  &__title {
+    font-size: 1em;
+    font-style: italic;
+    margin-bottom: 0.5em;
+  }
+
+  &__body {
+    margin-top: 0;
+    padding-left: 2ch;
+  }
+}
