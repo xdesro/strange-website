@@ -1,7 +1,7 @@
 @use './variables' as *;
 
 .website {
-  font-size: 2rem;
+  font-size: 1.8rem;
   margin-bottom: 2em;
 
   @media (min-width: 620px) {
@@ -16,7 +16,10 @@
 
   &__body {
     margin-top: 0;
-    padding-left: 2ch;
+
+    @media (min-width: 620px) {
+      padding-left: 2ch;
+    }
   }
 
   span {
