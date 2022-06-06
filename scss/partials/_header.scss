@@ -93,7 +93,9 @@
     color: inherit;
     &.inactive {
       color: $ui-mono-mid;
+      //   color: $ui-mono-mid-accessible-text;
       text-shadow: 0.0625rem 0.0625rem $ui-mono-contrast;
+      cursor: not-allowed;
     }
 
     &:first-letter {
