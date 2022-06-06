@@ -1,15 +1,25 @@
+@use './variables' as *;
+
 .website {
   font-size: 2rem;
   margin-bottom: 2em;
 
+  @media (min-width: 620px) {
+    font-size: 3rem;
+  }
+
   &__title {
     font-size: 1em;
-    font-style: italic;
+    font-weight: normal;
     margin-bottom: 0.5em;
   }
 
   &__body {
     margin-top: 0;
     padding-left: 2ch;
+  }
+
+  span {
+    color: $site-url-blue;
   }
 }

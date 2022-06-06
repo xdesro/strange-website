@@ -1,3 +1,5 @@
+@use './variables' as *;
+
 .footer {
   font-family: 'MS Sans';
   font-size: 0.7rem;
@@ -6,18 +8,18 @@
   right: 0;
   bottom: 0;
   left: 0;
-  padding: 4px 2px 2px;
-  color: #555555;
-  border: 2px solid #cbcbcb;
-  border-top: 1px solid white;
-  background: #cbcbcb;
+  padding: 0.25rem 0.125rem 0.125rem;
+  color: $ui-mono-mid-accessible-text;
+  border: 0.125rem solid $ui-mono-light;
+  border-top: 1px solid $ui-mono-contrast;
+  background: $ui-mono-light;
   p,
   marquee {
     display: block;
     margin: 0;
-    padding: 0.1rem 0.25rem;
-    border: 1px solid #929292;
-    border-right-color: white;
-    border-bottom-color: white;
+    padding: 0.125rem 0.25rem;
+    border: 0.0625rem solid $ui-mono-mid;
+    border-right-color: $ui-mono-contrast;
+    border-bottom-color: $ui-mono-contrast;
   }
 }

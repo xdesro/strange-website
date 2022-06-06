@@ -1,3 +1,5 @@
+@use './variables' as *;
+
 .visually-hidden {
   position: absolute;
   overflow: hidden;
@@ -16,9 +18,9 @@
   cursor: pointer;
   user-select: none;
   color: inherit;
-  border: 1px solid white;
-  border-right-color: black;
-  border-bottom-color: black;
+  border: 1px solid $ui-mono-contrast;
+  border-right-color: $ui-mono-neutral;
+  border-bottom-color: $ui-mono-neutral;
 
   &:before {
     position: absolute;
@@ -28,37 +30,28 @@
     width: 100%;
     height: 100%;
     content: '';
-    border: 1px solid #e5e5e5;
-    border-right-color: #929292;
-    border-bottom-color: #929292;
+    border: 1px solid $ui-mono-mid-light;
+    border-right-color: $ui-mono-mid;
+    border-bottom-color: $ui-mono-mid;
   }
 
-  //   &:focus:not(:active) {
-  //     &:after {
-  //       content: '';
-  //       position: absolute;
-  //       inset: 4px;
-  //       border: 1px dotted black;
-  //     }
-  //   }
-
   &:active {
-    border-top-color: black;
-    border-right-color: white;
-    border-bottom-color: white;
-    border-left-color: black;
+    border-top-color: $ui-mono-neutral;
+    border-right-color: $ui-mono-contrast;
+    border-bottom-color: $ui-mono-contrast;
+    border-left-color: $ui-mono-neutral;
 
     &:before {
-      border-color: #e5e5e5;
-      border-top-color: #929292;
-      border-left-color: #929292;
+      border-color: $ui-mono-mid-light;
+      border-top-color: $ui-mono-mid;
+      border-left-color: $ui-mono-mid;
     }
   }
 
   &--inactive {
     cursor: not-allowed;
     pointer-events: none;
-    color: #929292;
-    text-shadow: 1px 1px 0 white;
+    color: $ui-mono-mid;
+    text-shadow: 1px 1px 0 $ui-mono-contrast;
   }
 }

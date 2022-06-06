@@ -1,25 +1,27 @@
+@use './variables' as *;
+
 .header {
   font-family: 'MS Sans';
   font-size: 0.7rem;
   position: relative;
-  z-index: 3;
-  border: 4px solid #cbcbcb;
-  background-color: #cbcbcb;
+  z-index: 2;
+  border: 0.25rem solid $ui-mono-light;
+  background-color: $ui-mono-light;
   &:before {
     display: block;
     width: 100%;
     height: 1rem;
     margin-bottom: 0.25rem;
     content: '';
-    background-color: var(--ui-accent);
+    background-color: $ui-accent;
   }
   &:after {
     position: absolute;
-    right: -4px;
-    bottom: -4px;
-    left: -4px;
+    right: -0.25rem;
+    bottom: -0.25rem;
+    left: -0.25rem;
     content: '';
-    border-bottom: 1px solid #929292;
+    border-bottom: 1px solid $ui-mono-mid;
   }
 }
 
@@ -33,14 +35,14 @@
   .button {
     width: 14px;
     height: 12px;
-    background-color: #cbcbcb;
+    background-color: $ui-mono-light;
     &:after {
       font-size: 1px;
       display: block;
       width: 1px;
       height: 1px;
       content: '';
-      color: black;
+      color: $ui-mono-neutral;
     }
   }
   &__min {
@@ -80,7 +82,7 @@
   padding-bottom: 0.25rem;
   padding-left: 0.5rem;
   list-style-type: none;
-  border-bottom: 1px solid #929292;
+  border-bottom: 0.0625rem solid $ui-mono-mid;
 
   a {
     display: inline-block;
@@ -90,8 +92,8 @@
     text-decoration: none;
     color: inherit;
     &.inactive {
-      color: #929292;
-      text-shadow: 1px 1px #fff;
+      color: $ui-mono-mid;
+      text-shadow: 0.0625rem 0.0625rem $ui-mono-contrast;
     }
 
     &:first-letter {
@@ -104,9 +106,9 @@
 }
 
 .secondary-nav {
-  $b: #011893;
-  $g: #929292;
-  $w: #ffffff;
+  $b: $ui-accent;
+  $g: $ui-mono-mid;
+  $w: $site-contrast;
 
   display: grid;
   grid-auto-flow: column;
@@ -117,21 +119,26 @@
   padding-bottom: 0.5rem;
   padding-left: 0.5rem;
   list-style-type: none;
-  border-top: 1px solid white;
-  border-bottom: 1px solid #929292;
+  border-top: 1px solid $ui-mono-contrast;
+  border-bottom: 1px solid $ui-mono-mid;
 
   a {
     display: grid;
     grid-row-gap: 0.5em;
     place-content: center;
     place-items: center;
-    width: 4rem;
-    height: 4rem;
     text-decoration: none;
+    width: 3.2rem;
+    height: 3.2rem;
+
+    @media (min-width: 620px) {
+      width: 4rem;
+      height: 4rem;
+    }
   }
 
   span {
-    font-size: 1px;
+    font-size: 0.0625rem;
     display: block;
     &:before {
       display: block;
@@ -216,7 +223,7 @@
   padding-top: 0.5rem;
   padding-right: 0.5rem;
   padding-left: 0.5rem;
-  border-top: 1px solid white;
+  border-top: 1px solid $ui-mono-contrast;
   .button {
     margin: 0 0 0.25rem;
     padding: 0.2rem 0.5rem 0.1rem;
@@ -239,10 +246,10 @@
     display: block;
     margin: 0;
     padding: 0.2rem 0.5rem 0.1rem;
-    border: 1px solid #929292;
-    border-right-color: white;
-    border-bottom-color: white;
-    background: white;
+    border: 1px solid $ui-mono-mid;
+    border-right-color: $ui-mono-contrast;
+    border-bottom-color: $ui-mono-contrast;
+    background: $ui-mono-contrast;
     &:before {
       position: absolute;
       top: 0;
@@ -251,15 +258,16 @@
       left: 0;
       content: '';
       pointer-events: none;
-      border: 1px solid black;
-      border-right-color: #cbcbcb;
-      border-bottom-color: #cbcbcb;
+      border: 1px solid $ui-mono-neutral;
+      border-right-color: $ui-mono-light;
+      border-bottom-color: $ui-mono-light;
     }
   }
   input {
     font: inherit;
     width: 100%;
     border: none;
+    background: transparent;
     outline: none;
   }
   button {

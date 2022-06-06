@@ -2,6 +2,8 @@
 layout: layouts/base.njk
 ---
 
+<div class="about">
+
 # about
 
 hi i’m [henry](https://henry.codes), i’m a creative web developer based in new york city.
@@ -21,3 +23,5 @@ much of my writing, good or not _(mostly not)_, lives on twitter, which feels ve
 <sup>3</sup> the primary font on this website is [redaction](https://www.redaction.us/).
 
 <sup>4</sup> i appreciate you reading all of this, so i wanted to tell u that most of the other folks that come to this website think you’re cute _(but they’re too shy to tell you!)_. have a great day on the Internet.
+
+</div>
