@@ -3,9 +3,11 @@
 .website {
   font-size: 1.8rem;
   margin-bottom: 2em;
+  scroll-margin-top: 14rem;
 
   @media (min-width: 620px) {
     font-size: 3rem;
+    scroll-margin-top: 16rem;
   }
 
   &__title {

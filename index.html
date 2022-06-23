@@ -5,7 +5,7 @@ layout: layouts/base.njk
 <h1 class="visually-hidden">A strange website...</h1>
 {% set sortedwebsites = websites | reverse %}
 {% for website in sortedwebsites %}
-<article class="website" id="#{{ website.date | replace('-', '') }}">
+<article class="website" id="{{ website.date | replace('-', '') }}">
     <h2 class="website__title">
         <time>{{ website.date }}</time>
     </h2>
