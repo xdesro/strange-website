@@ -50,5 +50,9 @@
     {
         "date": "2022-06-23",
         "body": "a website with beautiful features — everyone remarks gleefully to each other: “isn’t that site beautiful? isn’t it wonderful to behold?” but all of its links are rotten, and many are completely dead. you can’t shake that something is deeply, terribly wrong with the website."
+    },
+    {
+        "date": "2022-07-01",
+        "body": "a website that always seems to be in far worse condition than when you left it. the stones fall from its very walls, and the raw HTML peeks through in places. it shouldn’t be this decrepit — you just updated the codebase last week, didn’t you? didn’t you? but that can’t be right...this dust looks years old..."
     }
 ]
