@@ -14,6 +14,19 @@
     font-size: 1em;
     font-weight: normal;
     margin-bottom: 0.5em;
+    a {
+      color: inherit;
+      text-decoration: none;
+      &:hover {
+        &:after {
+          display: inline-block;
+          margin-left: 0.25em;
+          vertical-align: super;
+          font-size: 0.5em;
+          content: '⚓️';
+        }
+      }
+    }
   }
 
   &__body {

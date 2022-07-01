@@ -7,7 +7,7 @@ layout: layouts/base.njk
 {% for website in sortedwebsites %}
 <article class="website" id="{{ website.date | replace('-', '') }}">
     <h2 class="website__title">
-        <time>{{ website.date }}</time>
+        <a href="#{{ website.date | replace('-', '') }}"><time>{{ website.date }}</time></a>
     </h2>
     <p class="website__body">{{ website.body | website | nl2br | safe }}</p>
 </article>
