@@ -1,58 +1,62 @@
 [
-    {
-        "date": "2021-05-09",
-        "body": "a website that feels like walking down a dirt road deep in an evergreen forest, and it’s so quiet that your steps are the loudest thing you can hear. the brook contentedly murmurs somewhere deeper in the woods. you know you’ll find it soon.\nthe brook swells as you approach. it breathes in as you do, slowly. you may bide your time wading, feeling the water's current excuse-me-pardon-me its way around your ankles as it races downstream. the brook breathes out as you do, slowly, like you've earned it."
-    },
-    {
-        "date": "2021-06-20",
-        "body":"a website that becomes more actively hostile to you using it over time"
-    },
-    {
-        "date": "2021-07-03",
-        "body": "a website that wants to delete itself"
-    },
-    {
-        "date": "2021-08-02",
-        "body": "a website that is pivoting to a career in forestry and conservation"
-    },
-    {
-        "date": "2021-08-14",
-        "body": "a website that remembers being a Figma file"
-    },
-    {
-        "date": "2021-10-07",
-        "body": "a website with unfinished business, doomed forever to haunt the ‘Net"
-    }
-    ,{
-        "date": "2021-11-20",
-        "body": "a website that stays up late, grappling with the realization that it just might love you back"
-    },
-    {
-        "date": "2022-01-07",
-        "body": "a website with a small cadre of close, personal friends"
-    },
-    {
-        "date": "2022-02-03",
-        "body": "a website quietly contemplating a murder most foul"
-    },
-    {
-        "date": "2022-04-04",
-        "body": "a website that is a garden, one which you enter through paddocks of silken-petaled flowers, and that you might exit through a sun-flicked tunnel of cypress trees. there is a hedge labyrinth, and small statues to be found, and to be here feels like a slow, calm breath out"
-    },
-    {
-        "date": "2022-06-02",
-        "body": "a website that was crafted in the untamed pagan wilderness, one thousand years before our king ascended to the throne, and which will live on in the furtive, secret shadows of the realm, one thousand years after that throne is naught but dust"
-    },
-    {
-        "date": "2022-06-10",
-        "body": "a website that allows you to watch it as it fearlessly ages; watch the shifting gazes of countless browser generations shape and malform it, from the fifty percent grey mists of our distant digital past, far into the hyperlink blue yonder"
-    },
-    {
-        "date": "2022-06-23",
-        "body": "a website with beautiful features — everyone remarks gleefully to each other: “isn’t that site beautiful? isn’t it wonderful to behold?” but all of its links are rotten, and many are completely dead. you can’t shake that something is deeply, terribly wrong with the website."
-    },
-    {
-        "date": "2022-07-01",
-        "body": "a website that always seems to be in far worse condition than when you left it. the stones fall from its very walls, and the raw HTML peeks through in places. it shouldn’t be this decrepit — you just updated the codebase last week, didn’t you? didn’t you? but that can’t be right...this dust looks years old..."
-    }
+  {
+    "date": "2021-05-09",
+    "body": "a website that feels like walking down a dirt road deep in an evergreen forest, and it’s so quiet that your steps are the loudest thing you can hear. the brook contentedly murmurs somewhere deeper in the woods. you know you’ll find it soon.\nthe brook swells as you approach. it breathes in as you do, slowly. you may bide your time wading, feeling the water's current excuse-me-pardon-me its way around your ankles as it races downstream. the brook breathes out as you do, slowly, like you've earned it."
+  },
+  {
+    "date": "2021-06-20",
+    "body": "a website that becomes more actively hostile to you using it over time"
+  },
+  {
+    "date": "2021-07-03",
+    "body": "a website that wants to delete itself"
+  },
+  {
+    "date": "2021-08-02",
+    "body": "a website that is pivoting to a career in forestry and conservation"
+  },
+  {
+    "date": "2021-08-14",
+    "body": "a website that remembers being a Figma file"
+  },
+  {
+    "date": "2021-10-07",
+    "body": "a website with unfinished business, doomed forever to haunt the ‘Net"
+  },
+  {
+    "date": "2021-11-20",
+    "body": "a website that stays up late, grappling with the realization that it just might love you back"
+  },
+  {
+    "date": "2022-01-07",
+    "body": "a website with a small cadre of close, personal friends"
+  },
+  {
+    "date": "2022-02-03",
+    "body": "a website quietly contemplating a murder most foul"
+  },
+  {
+    "date": "2022-04-04",
+    "body": "a website that is a garden, one which you enter through paddocks of silken-petaled flowers, and that you might exit through a sun-flicked tunnel of cypress trees. there is a hedge labyrinth, and small statues to be found, and to be here feels like a slow, calm breath out"
+  },
+  {
+    "date": "2022-06-02",
+    "body": "a website that was crafted in the untamed pagan wilderness, one thousand years before our king ascended to the throne, and which will live on in the furtive, secret shadows of the realm, one thousand years after that throne is naught but dust"
+  },
+  {
+    "date": "2022-06-10",
+    "body": "a website that allows you to watch it as it fearlessly ages; watch the shifting gazes of countless browser generations shape and malform it, from the fifty percent grey mists of our distant digital past, far into the hyperlink blue yonder"
+  },
+  {
+    "date": "2022-06-23",
+    "body": "a website with beautiful features — everyone remarks gleefully to each other: “isn’t that site beautiful? isn’t it wonderful to behold?” but all of its links are rotten, and many are completely dead. you can’t shake that something is deeply, terribly wrong with the website."
+  },
+  {
+    "date": "2022-07-01",
+    "body": "a website that always seems to be in far worse condition than when you left it. the stones fall from its very walls, and the raw HTML peeks through in places. it shouldn’t be this decrepit — you just updated the codebase last week, didn’t you? didn’t you? but that can’t be right...this dust looks years old..."
+  },
+  {
+    "date": "2022-07-06",
+    "body": "a website that your browser pleaded you not visit. too many internet explorers had gone before you, never to return. only one adventurer has come back, and truly, parts of them stayed behind. they dare not speak of the website to this day."
+  }
 ]

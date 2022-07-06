@@ -7,7 +7,10 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('css');
 
   eleventyConfig.addFilter('website', str => {
-    return str.replace('a website', `<span>a website</span>`);
+    const replaced = str
+      .replace('a website', `<span>a website</span>`)
+      .replace(' website ', ` <span>website</span> `);
+    return replaced;
   });
   return {
     htmlTemplateEngine: 'njk',
