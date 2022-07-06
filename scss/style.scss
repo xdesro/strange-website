@@ -6,3 +6,14 @@
 @use 'partials/header';
 @use 'partials/footer';
 @use 'partials/website';
+
+.return-link {
+  font-size: 1.8rem;
+  @media (min-width: 620px) {
+    font-size: 3rem;
+  }
+
+  &:before {
+    content: '← ';
+  }
+}

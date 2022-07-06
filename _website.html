@@ -1,3 +1,11 @@
+---
+pagination:
+    data: websites
+    size: 1
+    alias: website
+permalink: "/{{ website.date }}/index.html"
+og: "https://screenshot.henry.codes/{{ ('https://strange.website/' + website.date) | encodeURIComponent }}/opengraph"
+---
 <!DOCTYPE html>
 <html lang="en">
 
@@ -33,32 +41,16 @@
     <main>
         {% include "header.njk" %}
         <div class="app-inner">
-            {{ content | safe }}
+            <article class="website" id="{{ website.date | replace('-', '') }}">
+                <h2 class="website__title">
+                    <a href="#{{ website.date | replace('-', '') }}"><time>{{ website.date }}</time></a>
+                </h2>
+                <p class="website__body">{{ website.body | website | nl2br | safe }}</p>
+            </article>
+            <a class="return-link" href="/">back to all strange websites</a>
         </div>
         {% include 'footer.njk' %}
     </main>
-    <script>
-        const getValidUrl = (url = "") => {
-            let newUrl = window.decodeURIComponent(url).trim().replace(/\s/g, "");
-
-            if (/^(:\/\/)/.test(newUrl)) {
-                return `http${newUrl}`;
-            }
-            if (!/^(f|ht)tps?:\/\//i.test(newUrl)) {
-                return `//${newUrl}`;
-            }
-
-            return newUrl;
-        };
-
-        const locationForm = document.querySelector('#location');
-        locationForm.addEventListener('submit', e => {
-            e.preventDefault();
-            const { value } = e.target[0];
-            console.log(getValidUrl(value))
-            location.href = getValidUrl(value)
-        })
-    </script>
 </body>
 
 </html>
