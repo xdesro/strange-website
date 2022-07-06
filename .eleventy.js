@@ -12,6 +12,9 @@ module.exports = function (eleventyConfig) {
       .replace(' website ', ` <span>website</span> `);
     return replaced;
   });
+  eleventyConfig.addFilter('encodeURIComponent', str => {
+    return encodeURIComponent(str);
+  });
   return {
     htmlTemplateEngine: 'njk',
   };

@@ -4,7 +4,9 @@ pagination:
   size: 1
   alias: website
 permalink: '/{{ website.date }}/index.html'
-og: "https://screenshot.henry.codes/{{ ('https://strange.website/opengraph/' + website.date) | encodeURIComponent }}/opengraph"
+eleventyComputed:
+  encoded: 'https://strange.website/opengraph/{{ website.date }}'
+  og: https://screenshot.henry.codes/{{ encoded | encodeURIComponent }}/opengraph
 ---
 
 <!DOCTYPE html>
