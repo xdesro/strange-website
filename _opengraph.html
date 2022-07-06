@@ -3,8 +3,7 @@ pagination:
   data: websites
   size: 1
   alias: website
-permalink: '/{{ website.date }}/index.html'
-og: "https://screenshot.henry.codes/{{ ('https://strange.website/opengraph/' + website.date) | encodeURIComponent }}/opengraph"
+permalink: '/opengraph/{{ website.date }}/index.html'
 ---
 
 <!DOCTYPE html>
@@ -55,11 +54,16 @@ og: "https://screenshot.henry.codes/{{ ('https://strange.website/opengraph/' + w
     <meta name="msapplication-TileColor" content="#c0c0c0" />
     <meta name="theme-color" content="#ffffff" />
 
-    <meta
-      http-equiv="refresh"
-      content="0;URL='https://strange.website/#{{ website.date | replace('-', '') }}'"
-    />
     <meta name="robots" content="noindex" />
+
+    <style>
+      main {
+        max-width: 60rem;
+      }
+      .website {
+        font-size: 2rem;
+      }
+    </style>
   </head>
 
   <body>
