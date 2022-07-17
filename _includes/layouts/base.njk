@@ -55,7 +55,6 @@
         locationForm.addEventListener('submit', e => {
             e.preventDefault();
             const { value } = e.target[0];
-            console.log(getValidUrl(value))
             location.href = getValidUrl(value)
         })
     </script>
