@@ -9,8 +9,9 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addFilter('website', str => {
     const replaced = str
-      .replace('a website', `<span>a website</span>`)
-      .replace(' website ', ` <span>website</span> `);
+      .replaceAll('a website', `<span>a website</span>`)
+      .replaceAll(' website ', ` <span>website</span> `)
+      .replaceAll(' website,', ` <span>website</span>,`);
     return replaced;
   });
   eleventyConfig.addFilter('encodeURIComponent', str => {
