@@ -17,8 +17,8 @@ permalink: rss.xml
         <item>
             <title>{{ website.date }}</title>
             <description><![CDATA[{{ website.body | nl2br | safe }}]]></description>
-            <pubDate>{{ website.date | toISOString }}</pubDate>
-            <guid isPermaLink="false">{{ website.date | toISOString }}</guid>
+            <pubDate>{{ website.date | toUTCString }}</pubDate>
+            <guid isPermaLink="false">{{ website.date | toUTCString }}</guid>
         </item>
         {% endfor %}
 	</channel>
