@@ -1,0 +1,25 @@
+---
+permalink: rss.xml
+---
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Strange.Website</title>
+		<description>Well now, seems you've found a strange and perhaps surprising website, indeed. As with all things, take and enjoy your time — after all, no one may but you.</description>
+		<link>https://strange.website/</link>
+        <atom:link href="https://strange.website/rss.xml" rel="self" type="application/rss+xml" />
+		<image>
+			<link>https://strange.website/</link>
+			<url>https://strange.website/meta/favicon-32x32.png</url>
+			<title>Strange.Website</title>
+		</image>
+        {% set sortedwebsites = websites | reverse %}
+        {% for website in sortedwebsites %}
+        <item>
+            <title>{{ website.date }}</title>
+            <description><![CDATA[{{ website.body | nl2br | safe }}]]></description>
+            <pubDate>{{ website.date | toISOString }}</pubDate>
+            <guid isPermaLink="false">{{ website.date | toISOString }}</guid>
+        </item>
+        {% endfor %}
+	</channel>
+</rss>

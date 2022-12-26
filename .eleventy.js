@@ -14,6 +14,9 @@ module.exports = function (eleventyConfig) {
       .replaceAll(' website,', ` <span>website</span>,`);
     return replaced;
   });
+  eleventyConfig.addFilter('toISOString', str => {
+    return new Date(str).toISOString();
+  })
   eleventyConfig.addFilter('encodeURIComponent', str => {
     return encodeURIComponent(str);
   });
