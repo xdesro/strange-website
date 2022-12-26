@@ -1,8 +1,8 @@
 {
-    "editor.formatOnSave": true,
-    "prettier.singleQuote": true,
-    "prettier.arrowParens": "avoid",
-    "[html]": {
-        "editor.defaultFormatter":"vscode.html-language-features"
-    }
+  "editor.formatOnSave": false,
+  "prettier.singleQuote": true,
+  "prettier.arrowParens": "avoid",
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  }
 }
