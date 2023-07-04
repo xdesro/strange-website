@@ -6,7 +6,7 @@ pagination:
 permalink: '/{{ website.date }}/index.html'
 eleventyComputed:
   encoded: 'https://strange.website/opengraph/{{ website.date }}'
-  og: https://strange.website/opengraph/{{ website.date }}.png
+  og: https://screenshot.henry.codes/{{ ('https://strange.website/opengraph/' + website.date + '/') | encodeURIComponent }}/opengraph
 ---
 
 <!DOCTYPE html>
@@ -57,10 +57,10 @@ eleventyComputed:
     <meta name="msapplication-TileColor" content="#c0c0c0" />
     <meta name="theme-color" content="#ffffff" />
 
-    <meta
+    {# <meta
       http-equiv="refresh"
       content="0;URL='https://strange.website/#{{ website.date | replace('-', '') }}'"
-    />
+    /> #}
     <meta name="robots" content="noindex" />
   </head>
 
