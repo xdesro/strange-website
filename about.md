@@ -6,7 +6,7 @@ layout: layouts/base.njk
 
 # about
 
-hi i’m [henry](https://henry.codes), i’m a creative web developer based in new york city.
+hi i’m [henry](https://henry.codes), i’m a creative web developer based in ~~new york city~~ denver, colorado.
 
 welcome to my website. i don’t have a very good reason for making this site other than that i thought it would be fun :)
 
@@ -16,7 +16,7 @@ much of my writing, good or not _(mostly not)_, lives on twitter, which feels ve
 
 ## colophon
 
-<sup>1</sup> this site is built with Eleventy and Sass, and uses almost no Javascript.
+<sup>1</sup> this site is built with Eleventy and Sass, and uses no Javascript.
 
 <sup>2</sup> if you like this style of website, check out jordan’s [css framework for making more websites like this](https://jdan.github.io/98.css/). i didn’t use it here, but gosh i sure wish i had discovered it a little earlier in the process lol.
 
