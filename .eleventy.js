@@ -11,7 +11,8 @@ module.exports = function (eleventyConfig) {
     const replaced = str
       .replaceAll('a website', `<span>a website</span>`)
       .replaceAll(' website ', ` <span>website</span> `)
-      .replaceAll(' website,', ` <span>website</span>,`);
+      .replaceAll(' website,', ` <span>website</span>,`)
+      .replaceAll(' site ', ` <span>site</span> `);
     return replaced;
   });
   eleventyConfig.addFilter('toUTCString', str => {
