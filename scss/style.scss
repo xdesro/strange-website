@@ -7,6 +7,8 @@
 @use 'partials/footer';
 @use 'partials/website';
 
+@use 'partials/variables' as *;
+
 .return-link {
   font-size: 1.8rem;
   @media (min-width: 620px) {
@@ -15,5 +17,53 @@
 
   &:before {
     content: '← ';
+  }
+}
+
+.hol {
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    bottom:0;
+    inset-inline: 0;
+    height: 3lh;
+    background-image: linear-gradient(to bottom, transparent, #{$ui-mono-light} calc(100% - .25lh));
+  }
+  &__overlay {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    // top: 50%;
+    // transform: translateY(-50%);
+    height: 100%;
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: 0.2s;
+    &--active {
+      transition-duration: 0.8s;
+      opacity: 1;
+    }
+  }
+  &__overlay-inner {
+    position: sticky;
+    top: 50%;
+    transform: translateY(-50%);
+    aspect-ratio: 1;
+    max-width: 75%;
+    @media (min-width: 620px) {
+      max-width: 10ch;
+    }
+    max-height: calc(100% - 2rem);
+    margin-inline: auto;
+    overflow: hidden;
+    background-color: $ui-mono-light;
+    border: 4px solid $site-url-blue;
+  }
+  &__overlay-inner-inner {
+    width: calc(100% + 8ch);
+    margin-inline-start: -5ch;
+    transform: rotateY(180deg) translateY(calc(var(--inner-scroll) * 0.5));
   }
 }

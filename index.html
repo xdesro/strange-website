@@ -5,10 +5,46 @@ layout: layouts/base.njk
 <h1 class="visually-hidden">A strange website...</h1>
 {% set sortedwebsites = websites | reverse %}
 {% for website in sortedwebsites %}
-<article class="website" id="{{ website.date | replace('-', '') }}">
+<article class="website{% if website.specialClass %} {{ website.specialClass }}{% endif %}" id="{{ website.date | replace('-', '') }}">
     <h2 class="website__title">
         <a href="#{{ website.date | replace('-', '') }}"><time>{{ website.date }}</time></a>
     </h2>
     <p class="website__body">{{ website.body | website | nl2br | safe }}</p>
 </article>
 {% endfor %}
+
+<script>
+    const appInner = document.querySelector('.app-inner')
+
+    const holPost = document.querySelector('.hol');
+    const holOverlay = document.createElement('div');
+    const holOverlayInner = document.createElement('div');
+    const holOverlayInnerInner = document.createElement('div');
+
+    holOverlay.classList.add('hol__overlay');
+    holOverlay.ariaHidden = true;
+    
+    holOverlayInner.classList.add('hol__overlay-inner');
+    
+    holOverlayInnerInner.classList.add('hol__overlay-inner-inner');
+    holOverlayInnerInner.textContent = holPost.querySelector('.website__body').textContent.match(/inventorying your\s*(.*)/)[0].replace('inventorying your', '')
+
+    holOverlayInner.appendChild(holOverlayInnerInner)
+    holOverlay.appendChild(holOverlayInner)
+
+    holPost.appendChild(holOverlay)
+
+
+    appInner.addEventListener('scroll', e =>{
+        const rect = holPost.getBoundingClientRect();
+        const distanceScrolledInPost = rect.top - (14 * 16);
+        const overlayVisible = distanceScrolledInPost < -246
+        // holOverlay.style.setProperty('--scroll-distance', `${distanceScrollable}px`)
+        holOverlay.style.setProperty('--inner-scroll', `${distanceScrolledInPost}px`)
+        if (overlayVisible) {
+            holOverlay.classList.add('hol__overlay--active')
+        } else {
+            holOverlay.classList.remove('hol__overlay--active')
+        }
+    })
+</script>

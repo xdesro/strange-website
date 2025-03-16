@@ -16,7 +16,7 @@ much of my writing, good or not _(mostly not)_, lives on twitter, which feels ve
 
 ## colophon
 
-<sup>1</sup> this site is built with Eleventy and Sass, and uses no Javascript.
+<sup>1</sup> this site is built with Eleventy and Sass, and uses ~~no JavaScript~~ a very small amount of JavaScript for the House of Leaves post.
 
 <sup>2</sup> if you like this style of website, check out jordan’s [css framework for making more websites like this](https://jdan.github.io/98.css/). i didn’t use it here, but gosh i sure wish i had discovered it a little earlier in the process lol.
 
