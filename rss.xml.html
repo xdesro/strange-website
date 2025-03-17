@@ -16,6 +16,7 @@ permalink: rss.xml
         {% for website in sortedwebsites %}
         <item>
             <title>{{ website.date }}</title>
+            <link>https://strange.website/{{ website.date }}/</link>
             <description><![CDATA[{{ website.body | nl2br | safe }}]]></description>
             <pubDate>{{ website.date | toUTCString }}</pubDate>
             <guid isPermaLink="false">{{ website.date | toUTCString }}</guid>
