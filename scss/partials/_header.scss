@@ -278,3 +278,14 @@
     background: inherit;
   }
 }
+
+.button--nav {
+  font: inherit;
+  align-self: stretch;
+  background: inherit;
+
+  .inactive {
+    color: #929292;
+    text-shadow: 0.0625rem 0.0625rem whitesmoke;
+  }
+}

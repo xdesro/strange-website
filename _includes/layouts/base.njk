@@ -55,10 +55,32 @@
         };
 
         const locationForm = document.querySelector('#location');
+        const locationInput = document.querySelector('#location-field');
         locationForm.addEventListener('submit', e => {
             e.preventDefault();
             const { value } = e.target[0];
             location.href = getValidUrl(value)
+        })
+
+        const websites = ['https://fogcam.org/','http://gaffa.org/','https://info.cern.ch/hypertext/WWW/TheProject.html','http://toastytech.com/evil/index.html','https://www.pmichaud.com/toast/','http://home.mcom.com/home/welcome.html','https://zombo.com/','https://blamensir.neocities.org/', 'https://web.archive.org/web/20010301235217/http://www.dinosauria.com/','http://web.archive.org/web/20160417053423/http://deniro.jvlnet.com/','https://www.cs.dartmouth.edu/~wbc/lute/lute.html']
+        const getRandomWebsite = websites => {
+            return websites[Math.floor(Math.random() * websites.length)];
+        }
+
+        {# const navigationButtons = document.querySelectorAll('.button--nav'); #}
+        const actionSetBrowser = document.querySelector('[data-action="setBrowser"]');
+        const actionSetBrowserAndGo = document.querySelector('[data-action="setBrowserAndGo"]');
+
+        actionSetBrowser.addEventListener('click', e => {
+            locationInput.value = getRandomWebsite(websites)
+        })
+         actionSetBrowserAndGo.addEventListener('click', e => {
+            actionSetBrowserAndGo.textContent = '...prepare thyself...'
+            locationInput.value = getRandomWebsite(websites)
+
+            setTimeout(() => {
+                location.href = locationInput.value
+            }, 1000)
         })
     </script>
 </body>
