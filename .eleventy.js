@@ -12,6 +12,8 @@ module.exports = function (eleventyConfig) {
       .replaceAll('a website', `<span>a website</span>`)
       .replaceAll(' website ', ` <span>website</span> `)
       .replaceAll(' website,', ` <span>website</span>,`)
+      .replaceAll(' websites ', ` <span>websites</span>`)
+      .replaceAll(' websites,', ` <span>websites</span>,`)
       .replaceAll(' site ', ` <span>site</span> `);
     return replaced;
   });
