@@ -14,7 +14,8 @@ module.exports = function (eleventyConfig) {
       .replaceAll(' website,', ` <span>website</span>,`)
       .replaceAll(' websites ', ` <span>websites</span>`)
       .replaceAll(' websites,', ` <span>websites</span>,`)
-      .replaceAll(' site ', ` <span>site</span> `);
+      .replaceAll(' site ', ` <span>site</span> `)
+      .replaceAll('computers', `<span>computers</span>`);
     return replaced;
   });
   eleventyConfig.addFilter('toUTCString', str => {
