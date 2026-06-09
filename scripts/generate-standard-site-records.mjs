@@ -53,6 +53,7 @@ for (const website of websites) {
     site: PUBLICATION_URI,
     title: website.date,
     path: `/${website.date}/`,
+    description: website.body,
     publishedAt: new Date(website.date).toISOString(),
   };
 
