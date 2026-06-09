@@ -6,7 +6,8 @@
   "scripts": {
     "start": "concurrently 'sass --no-source-map --watch ./scss:./css' 'npx @11ty/eleventy --serve'",
     "build": "sass --no-source-map --style compressed ./scss:./css && npx @11ty/eleventy",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "syndicate:atproto": "node scripts/generate-standard-site-records.mjs"
   },
   "keywords": [],
   "author": "",
@@ -15,5 +16,8 @@
     "@11ty/eleventy": "^1.0.1",
     "concurrently": "^7.2.1",
     "sass": "^1.52.2"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2"
   }
 }

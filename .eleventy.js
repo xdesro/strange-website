@@ -7,6 +7,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('img');
   eleventyConfig.addPassthroughCopy('css');
   eleventyConfig.addPassthroughCopy({'atproto-did': '.well-known/atproto-did'});
+  eleventyConfig.addPassthroughCopy({'atproto-standard-site': '.well-known/site.standard.publication'});
 
   eleventyConfig.addFilter('website', str => {
     const replaced = str
